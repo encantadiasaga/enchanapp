@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enchan Dictionary</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-V1oeZEebVFWWVuKV8Z6Zc+4VNSB4pnXYhzDjUxDzg2yJjWObCrBL9Sjxy2+mW5u9jJ1Yp8NEdL4RZVJjebjAxjg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <style>
       body {
@@ -25,12 +24,19 @@
       .container {
         width: 80%;
         max-width: 600px;
-        background-color: rgba(232, 206, 140, 0.9);
+        background-color: rgba(232, 206, 140, 0.5);
         /* Goldenrod overlay */
         padding: 20px;
         border-radius: 15px;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        backdrop-filter: saturate(180%) blur(20px);
+		-webkit-backdrop-filter: saturate(180%) blur(20px);
       }
+
+	#searchInput {
+		font-size: 16px;
+		font-family: 'Lato', sans-serif;
+	}
 
       h1 {
         text-align: center;
@@ -210,8 +216,8 @@
   <body>
     <div class="container">
       <h1>Enchan Dictionary</h1>
-      <input type="text" id="searchInput" placeholder="Seek thy word or definition" oninput="search()">
-      <button id="filterButton">Filter by Word</button>
+      <input type="text" id="searchInput" placeholder="Search here" oninput="search()">
+      <button id="filterButton">Search by Word</button>
       <ul id="wordList"></ul>
       <div id="detailedView" class="detailed-view"></div>
     </div>
@@ -614,7 +620,7 @@
 
       function toggleFilter() {
         filterByWord = !filterByWord;
-        document.getElementById("filterButton").innerText = filterByWord ? "Filter by Word" : "Filter by Definition";
+        document.getElementById("filterButton").innerText = filterByWord ? "Search by Word" : "Search by Definition";
         search();
       }
 
