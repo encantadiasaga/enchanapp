@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enchanta Dictionary</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/optimus-princeps" rel="stylesheet">
     <style>
       body {
         font-family: 'Lato', sans-serif;
@@ -20,6 +21,7 @@
         align-items: center;
         height: 100vh;
       }
+
 
       .container {
         width: 80%;
@@ -36,6 +38,19 @@
 	#searchInput {
 		font-size: 16px;
 		font-family: 'Lato', sans-serif;
+	}
+	
+	.footer-content > p {
+	font-size: 12px;
+	text-align: left;
+	color: rgba(255,255,255,0.5)!important;
+	}
+	
+	.footer-content > p > a {
+	font-size: 12px;
+	text-decoration: underline;
+	color: rgba(255,255,255,0.5);
+	font-weight: bold!important
 	}
 
       h1 {
@@ -210,12 +225,20 @@
         height: 30px;
         border-radius: 50%;
       }
+
+		.optimus-princeps {
+      font-family: 'OptimusPrinceps', sans-serif!important;
+      font-style: normal;
+      font-size: 40px;
+      text-align: center;
+      color: #8B4513;
+    }
     </style>
   </head>
 
   <body>
     <div class="container">
-      <h1>Enchanta Dictionary</h1>
+      <p class="optimus-princeps"><span>Enchanta Dictionary</span></p>
       <input type="text" id="searchInput" placeholder="Search here" oninput="search()">
       <button id="filterButton">Search by Word</button>
       <ul id="wordList"></ul>
@@ -657,7 +680,7 @@
 
       <footer>
         <div class="footer-content">
-          <p>Created with love and maintained by the <b>@EncantadiaSAGA</b> Team</p>
+          <p>Created with love and maintained by the <b>@EncantadiaSAGA</b> Team<br>Words were sourced from the <a href="https://encantadiasaga.fandom.com/" target="_blank">Encantadia Wikia</a></p>
           <div class="social-icons">
             <!-- Add your social media links and icons here -->
             <a href="https://www.facebook.com/encantadiasaga" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/2048px-2021_Facebook_icon.svg.png" alt="Facebook"></a>
