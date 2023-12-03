@@ -40,6 +40,10 @@
 		font-family: 'Lato', sans-serif;
 	}
 	
+p {
+  margin: 0%!important;
+}
+
 	.footer-content > p {
 	font-size: 12px;
 	text-align: left;
@@ -62,7 +66,7 @@
       }
 
       input {
-        width: calc(100% - 16px);
+        width: calc(100% - 22px);
         padding: 10px;
         margin-bottom: 10px;
         border: 1px solid #8B4513;
@@ -191,7 +195,6 @@
         width: 100%;
         background-color: #6e5520;
         /* Golden background color */
-        padding: 10px;
         text-align: center;
       }
 
@@ -213,7 +216,7 @@
       }
 
       .social-icons a {
-        margin: 0 10px;
+        margin: 0 6px;
         text-decoration: none;
         color: #fff;
         /* White text color */
@@ -226,13 +229,16 @@
         border-radius: 50%;
       }
 
-		.optimus-princeps {
+	  .optimus-princeps {
       font-family: 'OptimusPrinceps', sans-serif!important;
       font-style: normal;
       font-size: 40px;
       text-align: center;
       color: #8B4513;
     }
+
+	.arrow-right {
+	color: #8B4513;
     </style>
   </head>
 
@@ -616,7 +622,7 @@
 
         dictionaryData.forEach(entry => {
           const listItem = document.createElement("li");
-          listItem.innerHTML = `<div><strong class="word">${entry.word}:</strong> ${entry.definition}</div> <span>&#10165;</span>`;
+          listItem.innerHTML = `<div><strong class="word">${entry.word}:</strong> ${entry.definition}</div> <span class="arrow-right">&#8680;</span>`;
           listItem.addEventListener("click", () => showDetailedView(entry));
           wordList.appendChild(listItem);
         });
