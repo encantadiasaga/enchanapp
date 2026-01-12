@@ -738,7 +738,7 @@ const dictionaryData = [
       wordList.innerHTML = "";
       dictionaryData.forEach(entry => {
         const li = document.createElement("li");
-        li.innerHTML = `<div><strong class="word">${entry.word}</strong></div><span>&#10170;</span>`;
+        li.innerHTML = `<div><strong class="word">${entry.word}</strong></div>:${entry.definition}<span>&#10170;</span>`;
         li.onclick = () => showDetailedView(entry);
         wordList.appendChild(li);
       });
@@ -753,7 +753,7 @@ const dictionaryData = [
       wordList.innerHTML = "";
       list.forEach(entry => {
         const li = document.createElement("li");
-        li.innerHTML = `<div><strong class="word">${entry.word}</strong></div>`;
+        li.innerHTML = `<div><strong class="word">${entry.word}</strong>:${entry.definition}</div>`;
         li.onclick = () => showDetailedView(entry);
         wordList.appendChild(li);
       });
