@@ -759,6 +759,13 @@ const dictionaryData = [
       });
     }
 
+    function toggleFilter() {
+      filterByWord = !filterByWord;
+      filterButton.textContent = filterByWord ? "Gamit ang salitang Enchanta" : "Gamitin ang kahulugan";
+      search();
+    }
+
+
     function showDetailedView(entry) {
       detailedView.innerHTML = `
         <div class="word">${entry.word}</div>
